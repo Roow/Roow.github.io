@@ -5,6 +5,13 @@
 layout: default
 ---
 
-# Hi, I'm Robin!
+# Hi, I'm Robin Li!
 
-I enjoy working with eletronics, software and everything in between. I recently graduted with a Mechantronics Engineering Degree from Monash University.
+I am a recent Graduate Mechatronics Engineer. I enjoy working with eletronics, software and everything in between.
+
+You can find my professional experiences and projects that I've worked on below!
+
+{% include experience.html %}
+
+
+{% include projects.html %}

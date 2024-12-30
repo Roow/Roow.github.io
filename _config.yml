@@ -1,12 +1,10 @@
 # Site settings
-title: Robin's personal website
-
+title: Robin Li
 description: >- # this means to ignore newlines until "baseurl:"
   Mechatronics Engineering Graduate, Electronics Enthusiast, and amateur Software Developer. 
 domain: robinli.xyz
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://robinli.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-# Build settings
+baseurl: ""
+url: "https://robinli.xyz"
 
 
 # Exclude from processing.

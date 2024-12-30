@@ -5,11 +5,7 @@
 layout: default
 ---
 
-# Hi, I'm Robin Li!
-
-I am a recent Graduate Mechatronics Engineer. I enjoy working with eletronics, software and everything in between.
-
-You can find my professional experiences and projects that I've worked on below!
+{% include intro.html %}
 
 {% include experience.html %}
 

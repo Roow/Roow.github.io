@@ -1,66 +1,74 @@
 /* Intro Section */
-.intro-section {
-    padding: 3rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.intro{
     min-height: 50vh;
-  }
   
-  .intro-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    width: 100%;
-    padding: 2rem;
-  }
-  
-  .intro-left {
-    flex: 1;
-    text-align: left;
-    max-width: 45%;
-    font-size: 2rem;
-  }
-  
-  .intro-right {
-    flex: 1;
-    max-width: 50%;
-    text-align: left;
-    font-size: 1rem;
-    padding: 1rem 0;
-  }
-  
-  .name-highlight {
-    color: #0073e6; /* Make the name stand out with a color */
-  }
-  
-  .title {
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
-    color: #666;
-  }
-  
-  .social-icons {
-    margin-top: 10rem;
-  }
-  
-  .social-icons a {
-    margin-right: 1rem;
-  }
-  
-  .social-icons img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  @media (max-width: 768px) {
     .intro-container {
-      flex-direction: column;
+      padding: 3rem 0;
+      max-width: 1200px;
+
+      // flexbox
+      display: flex;
+      justify-content: space-between;
+
+      @include small-screen {
+        flex-direction: column;
+        align-items: left;
+      }
+
+      @include large-screen {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .intro-left {
+        flex: 1;
+        font-size: 2rem;
+
+        @include small-screen {
+          padding: 1rem;
+        }
+
+        @include large-screen {
+          max-width: 45%;
+        }
+  
+        .name-highlight {
+          color: $blue; // Make the name stand out with a color
+        }
+      }
+  
+      .intro-right {
+        flex: 1;
+        text-align: left;
+        font-size: 1rem;
+        padding: 1rem 0;
+
+        @include small-screen {
+          padding: 1rem;
+        }
+
+        @include large-screen {
+          max-width: 50%;
+        }
+      }
     }
-    
-    .intro-left, .intro-right {
-      padding: 1rem;
+  
+    .title {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      color: $grey;
+    }
+  
+    .social-icons {
+      margin-top: 10rem;
+  
+      a {
+        margin-right: 1rem;
+      }
+  
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
-  

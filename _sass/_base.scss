@@ -1,15 +1,40 @@
-/* Use a CSS reset or normalize */
-* {
-  margin: 0;
-  padding: 0;
+// colours
+$blue: #0073e6;
+$white: #f9f9f9;
+$light-grey: #ddd;
+$grey: #6b6b6b;
+$dark-grey: #555;
+$black: #333;
+
+// media queries
+$small-screen_pixel: 768px;
+@mixin small-screen {
+  @media (max-width: $small-screen_pixel) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: $small-screen_pixel) {
+    @content;
+  }
+}
+
+// CSS reset
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+// remove margin
+* {
+  margin: 0;
+}
+
+// font
 :root {
   font-family: 'Inter', sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
-
 @supports (font-variation-settings: normal) {
   :root { 
     font-family: 'InterVariable', sans-serif; 
@@ -18,17 +43,15 @@
 
 /* Base styling for body */
 body {
-  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  padding: 2rem; /* Added body padding for overall page spacing */
-  background-color: #f9f9f9;
+  line-height: 1.5;
+  color: $black;
+  background-color: $white;
 }
 
 /* Heading styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem; /* Added padding below headings */
@@ -36,14 +59,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Paragraph styles */
 p {
-  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   margin-bottom: 1.5rem; /* Increase margin for spacing between paragraphs */
 }
 
 /* Link styles */
 a {
-  color: #0073e6;
+  color: $blue;
   text-decoration: none;
 }
 
@@ -54,8 +76,8 @@ a:hover {
 /* Container for overall layout */
 .container {
   max-width: 1200px;
+  padding: 2rem;
   margin: 0 auto;
-  padding: 2rem; /* Increased padding inside container */
 }
 
 /* Section styling */

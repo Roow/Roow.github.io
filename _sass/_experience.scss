@@ -1,54 +1,76 @@
-.experience-section {
-  padding: 4rem 0;
+.experience {
+
+  .experience-container {
+    max-width: 1200px;
+    width: 100%;
+  }
 
   .section-title {
     text-align: left;
     font-size: 2rem;
     margin-bottom: 3rem;
-    color: #0073e6;
+    color: $blue;
   }
 
   .job {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $light-grey;
+
+    // flexbox
+    display: flex;
+    justify-content: space-between;
+    @include small-screen {
+      flex-direction: column;
+      align-items: left;
+    }
+
+    @include large-screen {
+      flex-direction: row;
+      align-items: center;
+    }
 
     .job-info {
       flex: 1;
-      max-width: 45%;
+
+      @include small-screen {
+        // nothing
+      }
+
+      @include large-screen {
+        max-width: 45%;
+      }
 
       .job-title {
-        font-size: 1.75rem;
-        color: #333;
+        font-size: 1.5rem;
+        color: $black;
       }
 
       .company-name {
         font-size: 1.25rem;
-        color: #666;
+        color: $grey;
         margin: 0.5rem 0;
       }
 
       .job-dates {
         font-size: 0.875rem;
-        color: #999;
+        color: $grey;
       }
     }
 
     .job-description {
       flex: 1;
-      max-width: 50%;
-      font-size: 1rem;
-      color: #555;
 
-      ul {
-        list-style-type: disc;
-
-        li {
-          margin-bottom: 0.5rem;
-        }
+      @include small-screen {
+        // nothing
       }
+
+      @include large-screen {
+        max-width: 50%;
+      }
+      
+      font-size: 1rem;
+      color: $dark-grey;
     }
   }
 }

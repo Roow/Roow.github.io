@@ -67,10 +67,9 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* Container for overall layout */
@@ -99,4 +98,19 @@ li {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+  
+  &.visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
 }

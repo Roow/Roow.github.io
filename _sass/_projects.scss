@@ -41,6 +41,8 @@
   
         @include large-screen {
           max-width: 45%;
+          align-self: flex-start;
+          text-align: left;
         }
       }
       

@@ -34,11 +34,13 @@
       flex: 1;
 
       @include small-screen {
-        // nothing
+        margin-bottom: 1rem;
       }
 
       @include large-screen {
         max-width: 45%;
+        align-self: flex-start;
+        text-align: left;
       }
 
       .job-title {
